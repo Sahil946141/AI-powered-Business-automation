@@ -1,0 +1,16 @@
+# Environment files
+.env
+
+# Node
+node_modules/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Build tools
+.vite/
+
+# Uploads (optional – remove if you want them in git)
+uploads/

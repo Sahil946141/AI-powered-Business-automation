@@ -1,0 +1,11 @@
+langchain 
+pandas 
+fastapi 
+uvicorn 
+python-dotenv 
+requests 
+google-generativeai
+pypdf
+docx2txt
+pydantic
+langchain_google_genai 

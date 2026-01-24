@@ -1,0 +1,163 @@
+/**
+ * ReviewPage Styles
+ * Styles for the AI response review page
+ */
+
+.review-page {
+  min-height: 100vh;
+  padding: var(--spacing-xl);
+  background:
+    radial-gradient(900px 500px at 20% 0%, rgba(79, 70, 229, 0.10) 0%, rgba(79, 70, 229, 0) 55%),
+    radial-gradient(900px 500px at 90% 20%, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0) 55%),
+    linear-gradient(180deg, #ffffff 0%, var(--background) 35%, #ffffff 100%);
+}
+
+.review-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.review-header {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.review-header h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: -0.02em;
+}
+
+.ai-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.summary-item {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.summary-item .label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.summary-item .value {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.summary-item .value.priority-low {
+  color: var(--success-color);
+}
+
+.summary-item .value.priority-medium {
+  color: var(--warning-color);
+}
+
+.summary-item .value.priority-high,
+.summary-item .value.priority-critical {
+  color: var(--error-color);
+}
+
+.summary-item .value.confidence {
+  color: var(--primary-color);
+}
+
+.ai-notes {
+  padding: var(--spacing-md);
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-left: 4px solid var(--warning-color);
+  border-radius: var(--radius-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.ai-notes strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.ai-notes p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.review-form-container {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: var(--spacing-xl);
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  gap: var(--spacing-lg);
+}
+
+.loading-container .spinner {
+  width: 48px;
+  height: 48px;
+  border-width: 4px;
+}
+
+.error-container h2 {
+  color: var(--error-color);
+  font-size: 1.5rem;
+}
+
+.error-container p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.back-button {
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: rgba(15, 23, 42, 0.70);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition-base), background-color var(--transition-base), box-shadow var(--transition-base);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.18);
+}
+
+.back-button:hover:not(:disabled) {
+  background-color: rgba(15, 23, 42, 0.82);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.22);
+}
+
+.back-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
